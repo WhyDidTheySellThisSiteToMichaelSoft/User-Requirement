@@ -1,3 +1,3 @@
-# TRABALHO INTEGRADOR - ETAPA 1 - ENTREVISTA E DEFINIÇÃO DE REQUISITOS
+# FULL STACK WEB APPLICATION - UNIVERSITY PROJECT
 
-Contem um .odt e um .pdf
+Contains the material for development
