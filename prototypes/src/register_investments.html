@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <title>Cadastro De Investimentos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../dist/register_investments.css" rel="stylesheet">
+</head>
+
+  <body>
+    <div class="min-h-[100vh] relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25">
+      <div class="px-2 mt-4 relative rounded-xl overflow-auto">
+          <div class="min-h-[100vh] bg-white shadow mb-4">
+            <div class="py-4">
+              <h1 class="mt-4 text-center font-extrabold text-xl text-main-orange opacity-90">Cadastro De Investimentos
+              </h1>
+            </div>
+              <form class="w-full bg-white h-full grid">
+                  <div class="w-full bg-red mt-6 px-10 grid">
+                      <span class="text-slate-800">Nome</span>
+                      <input type="text" placeholder="digite o nome" class="rounded-sm mt-1 px-4 py-2 text-gray-700 outline outline-1 outline-zinc-500 focus:shadow-sm focus:shadow-current">
+                </div>
+              <form class="w-full bg-white h-full grid">
+                  <div class="w-full bg-red mt-6 px-10 grid">
+                      <span class="text-slate-800">CNPJ</span>
+                      <input type="text" placeholder="digite o CNPJ" class="rounded-sm mt-1 px-4 py-2 text-gray-700 outline outline-1 outline-zinc-500 focus:shadow-sm focus:shadow-current">
+                </div>
+                  <div class="w-full mt-6 px-10 grid">
+                      <span class="text-slate-800">Valor Inicial</span>
+                      <input type="text" placeholder="digite o valor inicial" class="rounded-sm mt-1 px-4 py-2 text-gray-700 outline outline-1 outline-zinc-500 focus:shadow-sm focus:shadow-current">
+                </div>
+                  <div class="w-full mt-6 px-10 grid">
+                      <span class="text-slate-800">Valor Atual</span>
+                      <input type="text" placeholder="digite o valor atual" class="rounded-sm mt-1 px-4 py-2 text-gray-700 outline outline-1 outline-zinc-500 focus:shadow-sm focus:shadow-current">
+                </div>
+                  <div class="w-full mt-6 px-10 grid">
+                      <span class="text-slate-800">Cidade</span>
+                      <input type="text" placeholder="digite a cidade" class="rounded-sm mt-1 px-4 py-2 text-gray-700 outline outline-1 outline-zinc-500 focus:shadow-sm focus:shadow-current">
+                  </div>
+                  <div class="w-full mt-6 px-10 grid">
+                      <span class="text-slate-800">Descrição</span>
+                      <textarea placeholder="digite a descrição" class="rounded-sm mt-1 px-4 py-2 text-gray-700 outline outline-1 outline-zinc-500 focus:shadow-sm focus:shadow-current"></textarea>
+                </div>
+                  <div class="w-full my-6 px-10 grid">
+                    <button class="bg-main-light-blue outline outline-1 outline-main-light-blue text-white py-2 rounded-md font-semibold tracking-tight">Cadastrar</button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>

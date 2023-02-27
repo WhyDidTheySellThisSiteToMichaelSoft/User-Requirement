@@ -1,0 +1,32 @@
+@media only screen and ( max-height: 299px ) and (max-width: 767px) {
+  .login_container{
+    display: none;
+  }
+}
+
+@media only screen and (min-height: 300px) and (max-width: 767px) {
+  .full_height {
+    min-height: 100%;
+    max-height: 100px;
+  }
+}
+
+/* branco = white */
+
+/* input { */
+/*   border: 2px solid black; */
+/*   outline: #4CAF50 solid  */
+/* } */
+
+.nos_blue {
+  background-color: rgba(0, 0, 68);
+}
+
+.nos_orange {
+  background-color: rgba(254, 82, 0);
+}
+/* @media only screen and (min-width: 768px) { */
+/*     .md\:min-h-50 { */
+/*         min-height: 10px; */
+/*     } */
+/* } */
