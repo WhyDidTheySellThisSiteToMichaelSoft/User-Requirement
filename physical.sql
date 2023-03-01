@@ -2,7 +2,6 @@
 --\c app_investimentos
 --set datestyle to 'ISO,DMY';
 
-
 DROP TABLE IF EXISTS investidor CASCADE;
 DROP TABLE IF EXISTS investimento CASCADE;
 DROP TABLE IF EXISTS oportunidade CASCADE;
@@ -10,7 +9,7 @@ DROP TABLE IF EXISTS participacao CASCADE;
 DROP TABLE IF EXISTS interesse CASCADE;
 
 
-CREATE TABLE IF NOT EXISTS investidor (
+CREATE TABLE IF NOT EXISTS public.investidor (
   id_investidor serial NOT NULL,
   nome text NOT NULL,
   email text NOT NULL,
@@ -22,7 +21,7 @@ CREATE TABLE IF NOT EXISTS investidor (
   CONSTRAINT telefone_uk UNIQUE(telefone)
 );
 
-CREATE TABLE IF NOT EXISTS investimento (
+CREATE TABLE IF NOT EXISTS public.investimento (
   id serial NOT NULL,
   nome text NOT NULL,
   descr text NOT NULL,
@@ -35,7 +34,7 @@ CREATE TABLE IF NOT EXISTS investimento (
 );
 
 
-CREATE TABLE IF NOT EXISTS oportunidade (
+CREATE TABLE IF NOT EXISTS public.oportunidade (
   id serial NOT NULL,
   nome text NOT NULL,
   descr text NOT NULL,
@@ -43,7 +42,7 @@ CREATE TABLE IF NOT EXISTS oportunidade (
 );
 
 
-CREATE TABLE IF NOT EXISTS participacao (
+CREATE TABLE IF NOT EXISTS public.participacao (
   id_investidor serial NOT NULL,
   id_investimento serial NOT NULL,
   vpinit bigint NOT NULL,
@@ -57,7 +56,7 @@ CREATE TABLE IF NOT EXISTS participacao (
     REFERENCES investimento(id) ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS interesse (
+CREATE TABLE IF NOT EXISTS public.interesse (
   id_investidor serial NOT NULL,
   id_oportunidade serial NOT NULL,
 
@@ -68,3 +67,5 @@ CREATE TABLE IF NOT EXISTS interesse (
     REFERENCES oportunidade(id) ON DELETE CASCADE
 );
 
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA "public" to aplicacao_user;
+GRANT SELECT, USAGE, UPDATE ON ALL SEQUENCES IN SCHEMA "public" to aplicacao_user;
